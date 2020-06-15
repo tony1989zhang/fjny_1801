@@ -68,3 +68,15 @@
 0:0:0:0:0:0:0:1 - - [15/Jun/2020:08:29:40 +0800] "GET /easyui/themes/super/images/tabs_icons.png HTTP/1.1" 200 144 http-bio-8989-exec-1 1
 0:0:0:0:0:0:0:1 - - [15/Jun/2020:08:29:40 +0800] "GET /easyui/themes/super/images/accordion_arrows.png HTTP/1.1" 200 14614 http-bio-8989-exec-1 2
 0:0:0:0:0:0:0:1 - - [15/Jun/2020:08:29:40 +0800] "GET /easyui/themes/super/superBlue.css.map HTTP/1.1" 404 949 http-bio-8989-exec-1 1
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:29 +0800] "GET / HTTP/1.1" 200 5413 http-bio-8989-exec-1 300
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /css/fjny.css HTTP/1.1" 200 421 http-bio-8989-exec-5 2
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/locale/easyui-lang-zh_CN.js HTTP/1.1" 200 2501 http-bio-8989-exec-4 4
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/themes/super/super.js HTTP/1.1" 200 736 http-bio-8989-exec-9 3
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /js/superDemo.js HTTP/1.1" 200 2672 http-bio-8989-exec-8 3
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/themes/super/css/font-awesome.min.css HTTP/1.1" 200 31000 http-bio-8989-exec-6 95
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /js/common.js HTTP/1.1" 200 7791 http-bio-8989-exec-10 1
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/jquery.min.js HTTP/1.1" 200 95957 http-bio-8989-exec-3 117
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/themes/super/superBlue.css HTTP/1.1" 200 73574 http-bio-8989-exec-7 122
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/jquery.easyui.min.js HTTP/1.1" 200 419460 http-bio-8989-exec-2 157
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /easyui/themes/super/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160 http-bio-8989-exec-7 33
+0:0:0:0:0:0:0:1 - - [15/Jun/2020:10:49:32 +0800] "GET /img/favicon.png HTTP/1.1" 200 31979 http-bio-8989-exec-2 53
