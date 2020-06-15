@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
-	//测试
+	//测试 张灿能
 	@RequestMapping("/")
 	public String showIndex(){
 		return "index";
