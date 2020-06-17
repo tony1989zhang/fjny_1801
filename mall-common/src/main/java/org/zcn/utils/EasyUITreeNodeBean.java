@@ -3,7 +3,7 @@ package org.zcn.utils;
 public class EasyUITreeNodeBean {
 	private long id;
 	private String text;
-	private String open;
+	private String state;
 	public long getId() {
 		return id;
 	}
@@ -16,11 +16,10 @@ public class EasyUITreeNodeBean {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public String getOpen() {
-		return open;
+	public String getState() {
+		return state;
 	}
-	public void setOpen(String open) {
-		this.open = open;
+	public void setState(String state) {
+		this.state = state;
 	}
-	
 }
