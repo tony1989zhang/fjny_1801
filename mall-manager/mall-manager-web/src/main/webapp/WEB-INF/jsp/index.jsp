@@ -33,7 +33,7 @@
 		<!--顶部-->
 		<div class="super-navigation">
 			<!--系统名称-->
-			<div class="super-navigation-title">SUPER THEME</div>
+			<div class="super-navigation-title">1801班-专属</div>
 			<!--自定义导航-->
 			<div class="super-navigation-main">
 				<div class="super-setting-left">
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-options="region:'west',title:'MAIN NAVIGATION',border:false"
+	<div data-options="region:'west',title:'模块',border:false"
 		class="super-west">
 		<!--左侧导航-->
 		<div class="easyui-accordion"
@@ -73,6 +73,7 @@
 				<ul>
 					<li id = "item-list" data-url='item-list'>商品列表</li>
 					<li id = "item-add"  data-url='item-add'>添加商品</li>
+					<li id = "item-param-list"  data-url='item-param-list'>规格参数</li>
 				</ul>
 			</div>
 		</div>
@@ -88,7 +89,7 @@
 	<div data-options="region:'south'" class="super-south">
 		<!--页脚-->
 		<div class="super-footer-info">
-			<span><i class="fa fa-info-circle"></i> 作者：tianyu</span> <span><i
+			<span><i class="fa fa-info-circle"></i> 作者：张灿能</span> <span><i
 				class="fa fa-copyright"></i> CopyRight 2017 版权所有 <i
 				class="fa fa-caret-right"></i></span>
 		</div>

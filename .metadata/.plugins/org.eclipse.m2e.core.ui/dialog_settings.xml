@@ -14,8 +14,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="F:\zcn\fjny_1801\mall-common"/>
 			<item value="F:\zcn\fjny_1801\mall-manager"/>
+			<item value="F:\zcn\fjny_1801\mall-common"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

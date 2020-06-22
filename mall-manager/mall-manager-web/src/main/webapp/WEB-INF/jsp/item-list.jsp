@@ -1,19 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>商品列表</title>
-</head>
-<body>
 	<div class="super-theme-example">
 		<div style="height: 550px;">
 			<table id="dgTbItem"></table>
 		</div>
 		<br />
 		<br />
-		<table id="pg" style="width: 300px"></table>
+		<!-- <table id="pg" style="width: 300px"></table> -->
+		<div id="itemEditWindow" class="easyui-window" title="商品编辑" style="width:80%;height:80%"
+   		 data-options="iconCls:'icon-save',modal:true,closed:true,href:'item-edit'"></div>
 	</div>
 	<script type="text/javascript">
 	
@@ -26,18 +21,76 @@
 					text: '添加',
 					iconCls: 'fa fa-plus',
 					handler: function() {
+						$("#item-add").click();
 					}
 				}, {
 					text: '编辑',
 					iconCls: 'fa fa-edit',
-					handler: function() {}
-				}, {
-					text: '保存',
-					iconCls: 'fa fa-save',
-					handler: function() {}
+					handler: function() {
+						var ids = getSelections();
+						//判断如果未选定，不执行，提示
+						if(ids.length == 0){
+							$.messager.alert('提示',"必须选择一个商品");
+							return;
+						}
+						//如果选定多行数据，提示：只能选择一个商品
+						if(ids.indexOf(',') > 0){
+							$.messager.alert('提示',"只能选择一个商品");
+							return;
+						}
+						$('#itemEditWindow').window({
+							onLoad:function(){
+								var data = $("#dgTbItem").datagrid("getSelections")[0];
+								console.log("onLoad:"+data);
+								$("#itemEditForm").form('load',data);
+								//将商品描述进行显示
+								$.getJSON("item/query/item-desc/" + data.id,function(result){
+									if(result.status == 200){
+										if(result.data != null)
+										itemEditEditor.html(result.data.itemDesc);
+									}
+								});
+								TT.init({
+									"pics":data.image,
+									"cid":data.cid,
+									fun:function(node){}
+								});
+							}
+						}).window('open');
+					}
 				},{
 					text: '删除',
 					iconCls: 'fa fa-remove',
+					handler: function() {
+						var ids = getSelections();
+						if(ids.length == 0){
+							$.messager.alert('提示',"必须选择一个或多个商品");
+							return ;
+						}
+						
+						//提醒是否删除数据
+						$.messager.confirm('确认', '您确认想要删除ID为'+ids+'商品吗？', function(r) {
+							if(r) {
+								//进行post跟服务端交互
+								var params = {"ids":ids};
+								$.post("/item/delete",params,function(data){
+									if(data.status == 200){
+										alert("删除成功");
+										$("#dgTbItem").datagrid("reload");
+									}else{
+										alert("删除失败:" + data.msg);
+									}
+								});
+							}
+						});
+					}
+				},{
+					text: '上架',
+					iconCls: 'fa fa-save',
+					handler: function() {}
+				},{
+					text: '下架',
+					iconCls: 'fa fa-save',
 					handler: function() {}
 				}],
 
@@ -114,6 +167,14 @@
 					}]
 				]
 			});
+		function getSelections(){
+			var itemList = $("#dgTbItem");
+			var sels = itemList.datagrid("getSelections");
+			var ids =[];
+			for(var i in sels){
+				ids.push(sels[i].id);
+			}
+			ids = ids.join(",");
+			return ids;
+		}
 		</script>
-</body>
-</html>
